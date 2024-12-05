@@ -46,6 +46,24 @@
             margin-top: 15px;
         }
 
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th, table td {
+            border: 1px solid #dddddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #f0f0f0; /* Light grey background for table header */
+            font-weight: bold;
+        }
+
         /* Links Styling */
         a {
             color: #007BFF; /* Standard blue for links */
@@ -119,7 +137,40 @@
         <hr>
         <h2 id="nuclear-propulsion">What is Nuclear Propulsion?</h2>
         <p>Explain the concept and mechanisms of nuclear propulsion, including its technical basis and how it differs from conventional propulsion systems.</p>
-        <hr>
+        
+        <!-- Table 1 -->
+        <table>
+            <caption><b>Table 1: Key metrics of propulsion systems</b></caption>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Chemical Rockets</th>
+                    <th>NTP (Nuclear Thermal Propulsion)</th>
+                    <th>NEP (Nuclear Electric Propulsion)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Specific Impulse (s)</td>
+                    <td>~450</td>
+                    <td>~900</td>
+                    <td>~10,000</td>
+                </tr>
+                <tr>
+                    <td>Thrust (kN)</td>
+                    <td>High</td>
+                    <td>Medium</td>
+                    <td>Low</td>
+                </tr>
+                <tr>
+                    <td>Propellant Efficiency</td>
+                    <td>Low</td>
+                    <td>Medium</td>
+                    <td>High</td>
+                </tr>
+            </tbody>
+        </table>
+        
         <h2 id="importance">Why Nuclear Propulsion Matters</h2>
         <p>Discuss the advantages of nuclear propulsion, such as reduced travel time to Mars, improved efficiency, and potential applications in space exploration.</p>
         <hr>
@@ -131,6 +182,7 @@
     </div>
 </body>
 </html>
+
 
 
 

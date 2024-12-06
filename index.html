@@ -65,7 +65,7 @@
 
         
         a {
-            color: #007BFF; /* Standard blue for links */
+            color: #007BFF; 
             text-decoration: none;
             font-weight: bold;
         }
@@ -113,7 +113,7 @@
     <div class="container">
         <img src="WebBanner2023.png" alt="Conference Banner" width="1200" height="300">
         <h1>ENG0018 Computer Laboratory 2023/24</h1>
-        <h2>Student URN: 6781095</h2>
+        <h2>Student URN: 6871095</h2>
         <hr>
         <h2>Conference Paper:</h2>
         <h2><b>Bridging the Gap: How Nuclear Propulsion Could Shorten the Journey to Mars</b></h2>
@@ -252,13 +252,13 @@
             document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
         }
     }
-    // Function to verify the last update time by re-fetching it from the API
+   
     async function verifyLastUpdatedTime() {
         document.getElementById('last-updated').innerText = 'Verifying...';
         await getLastUpdatedTime();
         alert("Last modified time has been successfully verified from GitHub API.");
     }
-    // Initial load to display the time on page load
+    
     window.onload = getLastUpdatedTime;
 </script>
 
@@ -266,37 +266,37 @@
  <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Word count function ////////////////////////////// -->
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
-<!-- Placeholder for total word count -->
+
 <p id="totalWordCount"></p>
 <hr>
 <script>
-  // Function to calculate word count for a given section
+  
   function calculateWordCount(sectionId) {
     const section = document.getElementById(sectionId);
-    if (!section) return 0; // Return 0 if the section does not exist
+    if (!section) return 0; 
     const text = section.textContent || "";
-    return text.trim().split(/\s+/).length; // Count words by splitting on spaces
+    return text.trim().split(/\s+/).length; 
   }
 
-  // Function to calculate and display the total word count
+  
   function displayTotalWordCount() {
     const sections = ["abstract", "introduction", "nuclear-propulsion", "importance", "challenges", "Conclusion"];
     let totalWordCount = 0;
 
-    // Iterate over section IDs and sum up word counts
+    
     sections.forEach(sectionId => {
       totalWordCount += calculateWordCount(sectionId);
     });
 
-    // Display total word count in the designated paragraph
+    
     const wordCountElement = document.getElementById("totalWordCount");
     wordCountElement.textContent = `Total Word Count: ${totalWordCount}`;
   }
 
-  // Run word count function on page load without overwriting other window.onload functions
+  
   window.onload = () => {
     displayTotalWordCount();
-    getLastUpdatedTime(); // Ensure existing functionality also runs
+    getLastUpdatedTime(); 
   };
 </script>
 
